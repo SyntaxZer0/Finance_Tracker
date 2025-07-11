@@ -309,8 +309,7 @@ void MonthlyExpenses(char *monthName) {
         scanf("%i", &monthChoice);
         ClearBuffer();
         strcpy(pickedMonth, monthNames[monthChoice - 1]);
-        snprintf(monthCopyPath, sizeof(monthCopyPath), "%s/%s/%s %s",
-                 DATA_MONTHS, pickedMonth, pickedMonth, MONTHLY_EXPENSES);
+        snprintf(monthCopyPath, sizeof(monthCopyPath), "%s/%s/%s %s",DATA_MONTHS, pickedMonth, pickedMonth, MONTHLY_EXPENSES);
         if (strcmp(monthPath, monthCopyPath) == 0) {
           printf("File paths are the same!!!\n");
           pressEnterToContinue();
